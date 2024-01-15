@@ -1,0 +1,33 @@
+<div class="card shadow mb-2">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">%table_name</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="dataTables_length" id="dataTable_length">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                    <thead>
+                                    <tr role="row">
+                                        %columns
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                                Tag: use code from the original page to replace this line !!!!!!!!!!!!!!!!!!!!!!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

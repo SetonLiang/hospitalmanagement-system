@@ -1,0 +1,84 @@
+{% extends 'hospital/patient_base.html' %}
+{% block content %}
+    {% load static %}
+
+
+
+    <div class="container-fluid">
+        <div class="card shadow mb-2">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Total Doctor List</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="dataTables_length" id="dataTable_length">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table class="table table-bordered dataTable" id="dataTable" width="100%"
+                                       cellspacing="0" role="grid" aria-describedby="dataTable_info"
+                                       style="width: 100%;">
+                                    <thead>
+                                    <tr role="row">
+                                        <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable"
+                                            rowspan="1" colspan="1" aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending">
+                                            Doctor Name
+                                        </th>
+                                        <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable"
+                                            rowspan="1" colspan="1" aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending">
+                                            Profile Picture
+                                        </th>
+                                        <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable"
+                                            rowspan="1" colspan="1" aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending">
+                                            Mobile
+                                        </th>
+                                        <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable"
+                                            rowspan="1" colspan="1" aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending">
+                                            Address
+                                        </th>
+                                        <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable"
+                                            rowspan="1" colspan="1" aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending">
+                                            Department
+                                        </th>
+
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for d in doctors %}
+                                        <tr>
+
+                                            <td> {{ d.get_name }}</td>
+                                            <td><img src="{% static d.profile_pic.url %}" alt="Profile Pic"
+                                                     height="40px" width="40px"/></td>
+                                            <td>{{ d.mobile }}</td>
+                                            <td>{{ d.address }}</td>
+                                            <td>{{ d.department }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+{% endblock content %}

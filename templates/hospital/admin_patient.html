@@ -1,0 +1,102 @@
+{% extends 'hospital/admin_base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="container-fluid">
+
+        <!-- Content Row -->
+        <div class="row">
+
+          </a>
+            <a class="col-xl-4 col-md-6 mb-4" href="/admin-view-patient">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                    Patient Record
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-user-nurse f-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a class="col-xl-4 col-md-6 mb-4" href="/admin-add-patient">
+                <div class="card border-left-info shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                    Admit Patient
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-user-plus f-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="row">
+
+            <a class="col-xl-4 col-md-6 mb-4" href="/admin-approve-patient">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Approve Patient
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-check-circle f-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a><a class="col-xl-4 col-md-6 mb-4" href="/admin-discharge-patient">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                Discharge Patient
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-user-md f-left"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/js/demo/chart-area-demo.js"></script>
+    <script src="/js/demo/chart-pie-demo.js"></script>
+
+{% endblock content %}
+

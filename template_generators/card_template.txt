@@ -1,0 +1,16 @@
+<a class="col-xl-4 col-md-6 mb-4" href="%link">
+                <div class="card border-left-%color shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-%color text-uppercase mb-1">
+                                    %name
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas %icon f-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>

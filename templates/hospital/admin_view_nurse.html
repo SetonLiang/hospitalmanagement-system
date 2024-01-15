@@ -1,0 +1,87 @@
+{% extends 'hospital/admin_base.html' %}
+{% block content %}
+    {% load static %}
+
+    <div class="container-fluid">
+        <div class="card shadow mb-2">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Nurses</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="dataTables_length" id="dataTable_length">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table class="table table-bordered dataTable" id="dataTable" width="100%"
+                                       cellspacing="0" role="grid" aria-describedby="dataTable_info"
+                                       style="width: 100%;">
+                                    <thead>
+                                    <tr role="row">
+                                        <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable"
+                                            rowspan="1" colspan="1" aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending">
+                                            Name
+                                        </th>
+
+                                        <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable"
+                                            rowspan="1" colspan="1" aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending">
+                                            Room number
+                                        </th>
+                                        <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable"
+                                            rowspan="1" colspan="1" aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending">
+                                            Mobile
+                                        </th>
+                                        <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable"
+                                            rowspan="1" colspan="1" aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending">
+                                            Address
+                                        </th>
+                                        <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable"
+                                            rowspan="1" colspan="1" aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending">
+                                            Update
+                                        </th>
+                                        <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable"
+                                            rowspan="1" colspan="1" aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending">
+                                            Delete
+                                        </th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for n in nurses %}
+                                            <tr>
+                                                <td>{{ n.name }}</td>
+                                                <td>{{ n.room_num }}</td>
+                                                <td>{{ n.mobile }}</td>
+                                                <td>{{ n.address }}</td>
+                                                <td><a class="btn btn-info btn-circle btn-sm" href="{% url 'update-nurse' n.id %}"><span
+                                                        class="fas fa-info-circle"></span></a></td>
+                                                <td><a class="btn btn-danger btn-circle btn-sm"
+                                                        href="{% url 'delete-nurse-from-hospital' n.id %}"><span
+                                                        class="fas fa-trash"></span></a></td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+{% endblock content %}

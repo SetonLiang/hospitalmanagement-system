@@ -1,0 +1,70 @@
+{% extends 'hospital/admin_base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="container-fluid">
+
+        <!-- Content Row -->
+        <div class="row">
+
+            <a class="col-xl-4 col-md-6 mb-4" href="/admin-view-nurse">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                    Nurse Record
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-user-nurse f-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="row">
+
+
+            <a class="col-xl-4 col-md-6 mb-4" href="/admin-add-nurse">
+                <div class="card border-left-info shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                    Register Nurse
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-user-plus f-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/js/demo/chart-area-demo.js"></script>
+    <script src="/js/demo/chart-pie-demo.js"></script>
+
+{% endblock content %}
+
